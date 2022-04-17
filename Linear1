@@ -1,0 +1,26 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from numpy import linalg as LA
+
+x = np.array([1., 1.])
+y = np.array([2., 0.])
+z = np.array([0., 2.])
+
+plt.figure()
+plt.plot(x[0], x[1], 'o')
+plt.plot(y[0], y[1], 'o')
+plt.plot(z[0], z[1], 'o')
+plt.grid()
+
+a = x + y + z
+plt.plot(a)
+plt.grid()
+
+
+scalar = np.dot(x, y)
+mod1 = LA.norm(x, 2)
+mod2 = LA.norm(y, 2)
+
+cos = scalar / mod1*mod2
+
+print(cos)
